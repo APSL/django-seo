@@ -47,7 +47,7 @@ def get_view_names(seo_views):
                             if hasattr(url, 'name') and url.name:
                                 output.append(url.name)
                     else:
-                        if url.name:
+                        if hasattr(url, 'name') and url.name:
                             output.append(url.name)
                             
     output = list(set(output))
